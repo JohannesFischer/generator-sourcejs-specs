@@ -1,19 +1,19 @@
-# generator-sourcejs-spec-pug [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Creates SourceJS spec in pug format
+# generator-sourcejs-specs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+
+> Creates SourceJS spec in HTML, Pug or Markdown format
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-sourcejs-spec-pug using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-sourcejs-specs using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
-npm install -g generator-sourcejs-spec-pug
+npm install -g yo generator-sourcejs-specs
 ```
 
-Then generate your new project:
+Then generate your spec in the your spec folder:
 
 ```bash
-yo sourcejs-spec-pug
+yo sourcejs-specs
 ```
 
 ## Getting To Know Yeoman
@@ -28,9 +28,9 @@ yo sourcejs-spec-pug
 MIT © [Johannes Fischer]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-sourcejs-spec-pug.svg
-[npm-url]: https://npmjs.org/package/generator-sourcejs-spec-pug
-[travis-image]: https://travis-ci.org//generator-sourcejs-spec-pug.svg?branch=master
-[travis-url]: https://travis-ci.org//generator-sourcejs-spec-pug
-[daviddm-image]: https://david-dm.org//generator-sourcejs-spec-pug.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-sourcejs-spec-pug
+[npm-image]: https://badge.fury.io/js/generator-sourcejs-specs.svg
+[npm-url]: https://npmjs.org/package/generator-sourcejs-specs
+[travis-image]: https://travis-ci.org//generator-sourcejs-specs.svg?branch=master
+[travis-url]: https://travis-ci.org//generator-sourcejs-specs
+[daviddm-image]: https://david-dm.org//generator-sourcejs-specs.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org//generator-sourcejs-specs
