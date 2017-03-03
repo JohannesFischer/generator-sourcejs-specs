@@ -1,6 +1,9 @@
-# generator-sourcejs-specs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-sourcejs-specs
 
-> Creates SourceJS spec in HTML, Pug or Markdown format
+[![NPM version][npm-image]][npm-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/JohannesFischer/generator-sourcejs-specs.svg)](https://greenkeeper.io/)
+
+Creates SourceJS spec in HTML, Pug or Markdown format
 
 ## Installation
 
@@ -16,6 +19,8 @@ Then generate your spec in the your spec folder:
 yo sourcejs-specs
 ```
 
+Works very similar to the [SourceJS spec gernerator](https://github.com/sourcejs/generator-sourcejs) but lets you choose the format of the specs created.
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
@@ -30,7 +35,3 @@ MIT © [Johannes Fischer]()
 
 [npm-image]: https://badge.fury.io/js/generator-sourcejs-specs.svg
 [npm-url]: https://npmjs.org/package/generator-sourcejs-specs
-[travis-image]: https://travis-ci.org//generator-sourcejs-specs.svg?branch=master
-[travis-url]: https://travis-ci.org//generator-sourcejs-specs
-[daviddm-image]: https://david-dm.org//generator-sourcejs-specs.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org//generator-sourcejs-specs
