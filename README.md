@@ -1,5 +1,7 @@
 # generator-sourcejs-specs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JohannesFischer/generator-sourcejs-specs.svg)](https://greenkeeper.io/)
+
 > Creates SourceJS spec in HTML, Pug or Markdown format
 
 ## Installation
