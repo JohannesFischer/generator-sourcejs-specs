@@ -30,7 +30,7 @@ Works very similar to the [SourceJS spec gernerator](https://github.com/sourcejs
 
 ## License
 
-MIT © [Johannes Fischer]()
+MIT © [Johannes Fischer](https://johannesfischer.github.io/)
 
 
 [npm-image]: https://badge.fury.io/js/generator-sourcejs-specs.svg

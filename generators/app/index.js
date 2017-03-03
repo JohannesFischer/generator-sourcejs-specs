@@ -1,17 +1,37 @@
 'use strict';
 var Generator = require('yeoman-generator');
-// var chalk = require('chalk');
 var yosay = require('yosay');
-
-const formats = {
-  html: 'HTML',
-  md: 'Markdown',
-  pug: 'Pug'
-};
 
 module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
+
+    this.formats = {
+      html: 'HTML',
+      md: 'Markdown',
+      pug: 'Pug'
+    };
+
+    if (Object.hasOwnProperty('keys')) {
+      this.keys = Object.keys(this.formats);
+    } else {
+      this.keys = [];
+
+      for (let key in this.formats) {
+        this.keys.push(key);
+      }
+    }
+
+
+    if (Object.hasOwnProperty('values')) {
+      this.values = Object.values(this.formats);
+    } else {
+      this.values = [];
+
+      for (let i = 0; i < this.formats.length; i++) {
+        this.values.push(this.formats[i]);
+      }
+    }
 
     // Have Yeoman greet the user.
     this.log(yosay('Creating all the new SourceJS specs!'));
@@ -22,7 +42,7 @@ module.exports = class extends Generator {
       type: 'list',
       name: 'format',
       message: 'Select spec format',
-      choices: Object.values(formats)
+      choices: this.values
     }, {
       type: 'input',
       name: 'name',
@@ -43,7 +63,7 @@ module.exports = class extends Generator {
     }]).then(answers => {
       this.data = {
         author: this.user.git.username,
-        format: Object.keys(formats).find(key => formats[key] === answers.format),
+        format: this.keys.find(key => this.formats[key] === answers.format),
         keywords: answers.keywords === 'none' ? undefined : answers.keywords,
         name: answers.name,
         title: answers.title
