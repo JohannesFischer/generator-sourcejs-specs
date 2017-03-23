@@ -6,31 +6,27 @@ module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
 
-    this.formats = {
-      html: 'HTML',
-      md: 'Markdown',
-      pug: 'Pug'
-    };
-
-    if (Object.hasOwnProperty('keys')) {
-      this.keys = Object.keys(this.formats);
-    } else {
-      this.keys = [];
-
-      for (let key in this.formats) {
-        this.keys.push(key);
+    this.formats = [
+      {
+        ending: 'src.html',
+        title: 'HTML'
+      },
+      {
+        ending: 'md',
+        title: 'Markdown'
+      },
+      {
+        ending: 'pug',
+        title: 'Pug'
       }
-    }
+    ];
 
+    this.fileEndings = [];
+    this.fileFormats = [];
 
-    if (Object.hasOwnProperty('values')) {
-      this.values = Object.values(this.formats);
-    } else {
-      this.values = [];
-
-      for (let i = 0; i < this.formats.length; i++) {
-        this.values.push(this.formats[i]);
-      }
+    for (let format in this.formats) {
+      this.fileEndings.push(format.ending);
+      this.fileFormats.push(format.title);
     }
 
     // Have Yeoman greet the user.
@@ -42,7 +38,7 @@ module.exports = class extends Generator {
       type: 'list',
       name: 'format',
       message: 'Select spec format',
-      choices: this.values
+      choices: this.fileFormats
     }, {
       type: 'input',
       name: 'name',
@@ -60,10 +56,17 @@ module.exports = class extends Generator {
       name: 'keywords',
       message: 'Enter spec keywords (comma separated)',
       default: 'none'
+    }, {
+      type: 'input',
+      name: 'author',
+      message: 'Enter author name',
+      default: this.user.git.username
     }]).then(answers => {
+      const format = this.formats.find(f => f.title === answers.format)
+
       this.data = {
-        author: this.user.git.username,
-        format: this.keys.find(key => this.formats[key] === answers.format),
+        author: answers.author,
+        format: format.ending,
         keywords: answers.keywords === 'none' ? undefined : answers.keywords,
         name: answers.name,
         title: answers.title
